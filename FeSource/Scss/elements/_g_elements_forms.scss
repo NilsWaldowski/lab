@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+/**
+ * Placeholder
+ * ------------------------------------------------
+ */
+input:-moz-placeholder {
+	color: $c-font-ph;
+	opacity: 1
+}
+
+input::-webkit-input-placeholder {
+	color: $c-font-ph;
+	opacity: 1
+}
+
+input::-webkit-input-placeholder {
+	color: $c-font-ph;
+	opacity: 1
+}
+
+input:-moz-placeholder {
+	/* Firefox 18- */
+	color: $c-font-ph;
+	opacity: 1
+}
+
+input::-moz-placeholder {
+	/* Firefox 19+ */
+	color: $c-font-ph;
+	opacity: 1
+}
+
+input:-ms-input-placeholder {
+	color: $c-font-ph;
+	opacity: 1
+}
+
+/**
+ * Global Form Styling
+ * ------------------------------------------------
+ */
+form ol, form ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+legend {
+	display: none;
+}
+
+fieldset {
+	border: 0;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.05em;
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+}
+
+input, textarea {
+	width: 100%;
+	border: 1px solid $c-border-color;
+	border-radius: $ui-round;
+	padding: .6em 0.3em;
+}
+
+select {
+	width: 100%;
+	border: none;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none; // https://css-tricks.com/almanac/properties/a/appearance/
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}

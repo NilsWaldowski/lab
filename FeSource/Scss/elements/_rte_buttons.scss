@@ -1,0 +1,80 @@
+/**
+ * $BUTTONS
+ * ==========================================================================
+ *	Recommended use:
+ *
+ *	<a class="button [button--modifier]" role="button" href="[url]">Button text</a>
+ *	<button class="button [button--modifier]" type="submit">Button text</button>
+ *	<input class="button [button--modifier]" type="submit" value="Button text">
+ */
+
+.btn, button {
+	line-height: 1;
+	padding: 0.6em 1em;
+
+	display: inline-block;
+	border: 2px solid $c-btn-bg-default;
+	font-family: inherit;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+
+	background-color: $c-btn-bg-default;
+	color: $c-btn-typo-default;
+
+	border-radius: $ui-round;
+	transition: all .2s ease-out;
+
+	/* UI States */
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+
+		background-color: $c-btn-typo-default;
+		color: $c-btn-bg-default;
+	}
+
+	&:-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	&:disabled,
+	&.btn--disabled {
+		cursor: default;
+		background: $c-disabled;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #FFFFFF;
+		}
+	}
+}
+
+/**
+ * Button Sizes
+ * --------------------------------------------------------------------------
+ */
+.btn--small {
+}
+
+.btn--large {
+}
+
+.btn--fluid {
+}
+
+/**
+ * Button Functions
+ * --------------------------------------------------------------------------
+ */
+.btn--success {
+}
+
+.btn--error {
+}

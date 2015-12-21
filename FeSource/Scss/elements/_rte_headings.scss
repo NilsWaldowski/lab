@@ -1,0 +1,122 @@
+// header-reset & link in header
+@include headings(1, 6) {
+	margin: 0;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+h1, .h1 {
+	font-size: $h1-size;
+	margin-bottom: $h1-ma-bo;
+	font-weight: $h1-weight;
+	line-height: $h1-line;
+	font-family: $h1-font-family;
+	color: $h1-color;
+
+	@include bp(large) {
+		font-size: $h1-size-large;
+		line-height: $h1-line-large;
+	}
+
+	@include bp(medium) {
+		font-size: $h1-size-medium;
+		line-height: $h1-line-medium;
+	}
+	@include bp(medium-small) {
+		font-size: $h1-size-small;
+		line-height: $h1-line-small;
+	}
+}
+
+h2, .h2 {
+	font-size: $h2-size;
+	margin-bottom: $h2-ma-bo;
+	font-weight: $h2-weight;
+	line-height: $h2-line;
+	font-family: $h2-font-family;
+	color: $h2-color;
+
+	@include bp(large) {
+		font-size: $h2-size-large;
+		line-height: $h2-line-large;
+	}
+
+	@include bp(medium) {
+		font-size: $h2-size-medium;
+		line-height: $h2-line-medium;
+	}
+	@include bp(medium-small) {
+		font-size: $h2-size-small;
+		line-height: $h2-line-small;
+	}
+}
+
+h3, .h3 {
+	font-size: $h3-size;
+	margin-bottom: $h3-ma-bo;
+	font-weight: $h3-weight;
+	line-height: $h3-line;
+	font-family: $h3-font-family;
+	color: $h3-color;
+
+	@include bp(large) {
+		font-size: $h3-size-large;
+		line-height: $h3-line-large;
+	}
+
+	@include bp(medium) {
+		font-size: $h3-size-medium;
+		line-height: $h3-line-medium;
+	}
+	@include bp(medium-small) {
+		font-size: $h3-size-small;
+		line-height: $h3-line-small;
+	}
+}
+
+h4, .h4 {
+	font-size: $h4-size;
+	margin-bottom: $h4-ma-bo;
+	font-weight: $h4-weight;
+	line-height: $h4-line;
+	font-family: $h4-font-family;
+	color: $h3-color;
+
+	@include bp(large) {
+		font-size: $h4-size-large;
+		line-height: $h4-line-large;
+	}
+
+	@include bp(medium) {
+		font-size: $h4-size-medium;
+		line-height: $h4-line-medium;
+	}
+	@include bp(medium-small) {
+		font-size: $h4-size-small;
+		line-height: $h4-line-small;
+	}
+}
+
+h5, .h5 {
+	font-size: $h5-size;
+	margin-bottom: $h5-ma-bo;
+	font-weight: $h5-weight;
+	line-height: $h5-line;
+	font-family: $h5-font-family;
+	color: $h5-color;
+}
+
+h6, .h6 {
+	font-size: $h6-size;
+	margin-bottom: $h6-ma-bo;
+	font-weight: $h6-weight;
+	line-height: $h6-line;
+	font-family: $h6-font-family;
+	color: $h6-color;
+}

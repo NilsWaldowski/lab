@@ -1,0 +1,30 @@
+/*------------------------------------*\
+	$RULES
+\*------------------------------------*/
+.rule, hr, .csc-frame-rulerAfter, {
+	border: none;
+	border-bottom: 1px solid $c-rules-border;
+	margin-left: auto; //centers it in case a modifier reduces the width of the rule/hr
+	margin-right: auto; //centers it in case a modifier reduces the width of the rule/hr
+}
+
+.csc-frame-rulerBefore {
+	border: none;
+	border-top: 1px solid $c-rules-border;
+	margin-left: auto; //centers it in case a modifier reduces the width of the rule/hr
+	margin-right: auto; //centers it in case a modifier reduces the width of the rule/hr
+}
+
+/**
+ * Dotted rules
+ */
+.rule--dotted {
+	border-bottom-style: dotted;
+}
+
+/**
+ * Dashed rules
+ */
+.rule--dashed {
+	border-bottom-style: dashed;
+}

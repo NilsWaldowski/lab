@@ -1,0 +1,56 @@
+@if $use-susy-grids == true {
+
+	$susy: (
+		flow: ltr,
+		math: fluid,
+		output: float,
+		//gutter-position: after, // http://susydocs.oddbird.net/en/latest/settings/#column-width
+		container: 960px, // could be also auto | 80% | 70em | 1200px
+		container-position: center, // left right center
+		columns: 12, // number | list if asymmetric layouts are needed - i.e. "1 1 2 3 5 8 13"
+		gutters: 0.2, // ratio of gutter space
+		column-width: false, // false | length
+		global-box-sizing: border-box, // border-box | content-box
+		last-flow: to,
+		debug: (
+			image: hide, // hide | show | show-columns | show-baseline
+			color: rgba(blue, 0.45),
+			output: background, // overlay | background
+			toggle: top right
+		),
+		use-custom: (
+			background-image: false,
+			background-options: false,
+			box-sizing: true,
+			clearfix: false,
+			rem: true
+		)
+	) !global;
+
+	$susy-medium: (
+		container: 100%
+	);
+
+	/*
+	// Usage example
+	.g-container {
+		@include container;
+	}
+
+	.content-main {
+		@include span(18 of 24);
+
+		@include bp(medium) {
+			@include span(24 of 24 last);
+		}
+	}
+	.content-right {
+		@include span(6 of 24 last);
+
+		@include bp(medium) {
+			@include span(24 of 24 last);
+		}
+	}
+	*/
+
+}

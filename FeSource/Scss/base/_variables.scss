@@ -1,0 +1,206 @@
+/*------------------------------------*\
+	$VARIABLES AND ABSTRACTIONS
+\*------------------------------------*/
+
+/**
+ * Which objects and abstractions would you like to use?
+ * --------------------------------------------------------------------------
+ */
+$use-susy-grids: 	false;
+
+
+
+
+/**
+ * Tell CPS-Framework when breakpoints start.
+ * usage: "@include bp(small) {}" or "@include bp(1024px) {}"
+ * --------------------------------------------------------------------------
+ * You can add more breakpoints in /css/scss/base/_mixins.scss --> @mixin bp
+ */
+$mobile-first: 		false; //if mobile first is true the breakpoints values are min-values
+
+$bp-small: 			570px;
+$bp-medium-small: 	768px;
+$bp-medium: 		1024px;
+$bp-large: 			1280px;
+
+
+
+
+/**
+ * Utility font sizes
+ * if you build a "perfect" accessibility project please use REM-values for every font-size specification
+ * usage: @include px-rem(font-size, value or variable without px unit);
+ * --------------------------------------------------------------------------
+ */
+$base-font-size-for-calc:	18;		// value without unit for calculation purpose (global element spacing)
+$base-font-size: 			18px;	// big screen
+$base-font-size-large: 		16px;	// "normal" desktop
+$base-font-size-medium: 	16px;	// tablet
+$base-font-size-small: 		16px;	// smartphone
+$base-line-height: 			1.375;
+$base-line-height-large: 	1.25;
+$base-line-height-medium: 	1.25;
+$base-line-height-small:	1.25;
+
+
+
+
+/**
+ * Base spacing units in PX (will converted to EMs depending on base font size for desktop)
+ * --------------------------------------------------------------------------
+ * This section defines spacing behavior for p, ul, ol, csc-content, csc-frames, hr, forms, ...
+ */
+$use-global-spacing: 		true !default;
+
+$space-label: 				9;	// label
+$space-input: 				14;	// input & textarea
+$space-element: 			18;	// i.e. p, ul, ol: is converted into EMs in order to have a relation between base-font-size and the space after the typographical element
+$space-module: 				40;	// i.e. csc-content, csc-frames: is applied as PX value in order to keep space that has little typographical context
+$space-module-half: 		$space-module / 2; // for csc-frame-rulerAfter & csc-frame-rulerBefore where we need to split the value
+
+
+
+
+/**
+ * Base colors
+ * --------------------------------------------------------------------------
+ * This $c-color is simply serving as a placeholder, and is not used.
+ */
+$c-black: 		#000000;
+$c-white: 		#FFFFFF;
+
+$c-error: 		red;
+$c-valid: 		green;
+$c-disabled:	grey;
+
+
+
+
+/**
+ * Color Usage
+ * --------------------------------------------------------------------------
+ * This $c-color is simply serving as a placeholder, and is not used.
+ */
+
+// base typography
+$c-font-main: 			$c-black;
+$c-font-link: 			$c-black;
+
+// border & forms (line before & after, inputs, hr, tables)
+$c-border-color: 		#CCCCCC;
+$ui-round: 				3px;
+
+// buttons
+$c-btn-bg-default: 		#333333;
+$c-btn-typo-default: 	#FFFFFF;
+
+// tables
+$c-table-border: 		$c-border-color;
+$c-table-head: 			#FFFFFF;
+$c-table-head-bg: 		#333333;
+$c-table-odd-bg: 		#EEEEEE;
+$c-table-even-bg: 		#FFFFFF;
+
+// rules
+$c-rules-border: 		$c-border-color;
+
+// form placeholder
+$c-font-ph: 			#CCCCCC;
+
+/**
+ * Base Font Families
+ * --------------------------------------------------------------------------
+ */
+$base-font-family: 		Arial, Georgia, serif;
+$base-font-family-2: 	Verdana, Arial, Georgia, serif;
+
+
+
+
+/**
+ * Heading font sizes
+ * --------------------------------------------------------------------------
+ * - small function to help using pixels but create em values in the context of the base-font-size
+ * - font-size values are pixel based but get converted to EMs
+ */
+$h1-font-family: 		$base-font-family;
+$h1-weight: 			normal;
+$h1-size: 				48px;
+$h1-size-large: 		48px;
+$h1-size-medium: 		40px;
+$h1-size-small: 		32px;
+$h1-line: 				1.05;
+$h1-line-large: 		1.05;
+$h1-line-medium: 		1.125;
+$h1-line-small: 		1.25;
+$h1-color: 				$c-font-main;
+$h1-ma-bo: 				0.25em; // should be EM value because the context size (the font-size) changes over the breakpoints
+
+$h2-font-family: 		$base-font-family;
+$h2-weight: 			normal;
+$h2-size: 				36px;
+$h2-size-large: 		36px;
+$h2-size-medium: 		32px;
+$h2-size-small: 		26px;
+$h2-line: 				1.25;
+$h2-line-large: 		1.25;
+$h2-line-medium: 		1.25;
+$h2-line-small: 		1.15;
+$h2-color: 				$c-font-main;
+$h2-ma-bo: 				0.35em;
+
+$h3-font-family: 		$base-font-family;
+$h3-weight: 			normal;
+$h3-size: 				28px;
+$h3-size-large: 		28px;
+$h3-size-medium: 		24px;
+$h3-size-small: 		22px;
+$h3-line: 				1.25;
+$h3-line-large: 		1.25;
+$h3-line-medium: 		1.25;
+$h3-line-small: 		1.13;
+$h3-color: 				$c-font-main;
+$h3-ma-bo: 				0.45em;
+
+$h4-font-family: 		$base-font-family;
+$h4-weight: 			bold;
+$h4-size: 				18px;
+$h4-size-large: 		18px;
+$h4-size-medium: 		18px;
+$h4-size-small: 		18px;
+$h4-line: 				1.22;
+$h4-line-large: 		1.22;
+$h4-line-medium: 		1.22;
+$h4-line-small: 		1.11;
+$h3-color: 				$c-font-main;
+$h4-ma-bo: 				0.55em;
+
+/*
+ * h4 & h5 are usually the same size as base-font-size but with different styling (therefore we didn't create breakpoint behaviour in advance)
+ */
+$h5-font-family: 		$base-font-family;
+$h5-weight: 			700;
+$h5-size: 				16px;
+$h5-line: 				$base-line-height;
+$h5-color: 				$c-font-main;
+$h5-ma-bo: 				0.4em;
+
+$h6-font-family: 		$base-font-family;
+$h6-weight: 			700;
+$h6-size: 				16px;
+$h6-line: 				$base-line-height;
+$h6-color: 				$c-font-main;
+$h6-ma-bo: 				0.4em;
+
+
+
+
+/**
+ * z-Index
+ * --------------------------------------------------------------------------
+ */
+$zLogo: 			9;
+$zIndexOne: 		1;
+$zOverlay: 			99;
+$zHeader: 			100;

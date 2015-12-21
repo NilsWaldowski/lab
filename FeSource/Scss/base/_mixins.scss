@@ -1,0 +1,229 @@
+/**
+ * When inside (context) selector
+ * usage: "@include when-inside(".myOuterClass") {color: red}"
+ * --------------------------------------------------------------------------
+ */
+@mixin when-inside($context) {
+	#{$context} & {
+		@content;
+	}
+}
+
+@mixin enhanced {
+	#{".enhanced"} & {
+		@content;
+	}
+}
+
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * usage: "@include accessibility;"
+ * --------------------------------------------------------------------------
+ */
+@mixin accessibility {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}
+
+/**
+ * PxToRm (px value but without the "px")
+ * usage: "@include px-rem(font-size, 18);"
+ * --------------------------------------------------------------------------
+ */
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@mixin px-rem($property, $values, $main-font-size: 16) {
+	// Empty list for all values in px
+	$px-values: ();
+	$rem-values: ();
+
+	// Iterate over entries
+	@each $value in $values {
+
+		// If the value is zero, return 0
+		@if $value == 0 or type_of($value) != number {
+			$px-values: append($px-values, $value);
+			$rem-values: append($rem-values, $value);
+
+			// If the value is not zero, convert it from px to rem
+		} @else {
+			$px-values: append($px-values, #{$value}px);
+			$rem-values: append($rem-values, ($value/$main-font-size)+rem);
+		}
+	}
+
+	// Return the property and its list of converted values
+	#{$property}: #{$px-values};
+	#{$property}: #{$rem-values};
+}
+
+/**
+ * Headings
+ * usage: "@include headings(1, 6) {...}"
+ * --------------------------------------------------------------------------
+ */
+@mixin headings($from: 1, $to: 6) {
+	%base-heading {
+		@content
+	}
+	@if $from >= 1 and $to <= 6 {
+		@for $i from $from through $to {
+			h#{$i} {
+				@extend %base-heading;
+			}
+		}
+	}
+}
+
+/**
+ * Reset Spacing
+ * --------------------------------------------------------------------------
+ */
+@mixin space-reset {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Clearfix
+ * usage: "@include clearfix;"
+ * --------------------------------------------------------------------------
+ */
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+/**
+ * Text Overflow / Truncate
+ * usage: "@include text-truncate;"
+ * --------------------------------------------------------------------------
+ */
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/**
+ * Breakpoints
+ * usage: "@include bp(small) {...}"
+ * --------------------------------------------------------------------------
+ */
+@mixin bp($media-query) {
+
+	@if $mobile-first == false {
+
+		@if $media-query == large {
+			@media only screen and (max-width: $bp-large) {
+				@content;
+			}
+		} @else if $media-query == medium {
+			@media only screen and (max-width: $bp-medium) {
+				@content;
+			}
+		} @else if $media-query == medium-small {
+			@media only screen and (max-width: $bp-medium-small) {
+				@content;
+			}
+		} @else if $media-query == small {
+			@media only screen and (max-width: $bp-small) {
+				@content;
+			}
+		} @else {
+			@media only screen and (max-width: $media-query) {
+				@content;
+			}
+		}
+
+	} @else {
+
+		@if $media-query == small {
+			@media only screen and (min-width: $bp-small) {
+				@content;
+			}
+		} @else if $media-query == medium-small {
+			@media only screen and (min-width: $bp-medium-small) {
+				@content;
+			}
+		} @else if $media-query == medium {
+			@media only screen and (min-width: $bp-medium) {
+				@content;
+			}
+		} @else if $media-query == large {
+			@media only screen and (min-width: $bp-large) {
+				@content;
+			}
+		} @else {
+			@media only screen and (min-width: $media-query) {
+				@content;
+			}
+		}
+
+	}
+}
+
+/**
+ * Font Face Mixin
+ *
+ * @link https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+ *
+ */
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
