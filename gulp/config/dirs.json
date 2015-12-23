@@ -1,0 +1,32 @@
+{
+	"src": {
+		"src_icons":		"./FeSource/Icons",
+		"src_img":			"./FeSource/Images",
+		"src_img_edit":		"./FeSource/ImagesEditorial",
+		"src_js":			"./FeSource/Javascript",
+		"src_js_enhance":	"./FeSource/JavascriptEnhancement",
+		"src_scss":			"./FeSource/Scss",
+		"src_fonts":		"./FeSource/Fonts"
+	},
+	"dest": {
+		"base_dir":			"../nilswaldowski.github.io",
+		"dest":				"../nilswaldowski.github.io/Assets",
+		"dest_css":			"../nilswaldowski.github.io/Assets/Css",
+		"dest_icons":		"../nilswaldowski.github.io/Assets/Icons",
+		"dest_img":			"../nilswaldowski.github.io/Assets/Images",
+		"dest_img_edit":	"../nilswaldowski.github.io/Assets/ImagesEditorial",
+		"dest_js":			"../nilswaldowski.github.io/Assets/Javascript",
+		"dest_js_enhance":	"../nilswaldowski.github.io/Assets/JavascriptEnhancement",
+		"dest_fonts":		"../nilswaldowski.github.io/Assets/Fonts"
+	},
+	"pl_dest": {
+		"pl_public":				"./public/Assets",
+		"pl_public_css":			"./public/Assets/Css",
+		"pl_public_icons":			"./public/Assets/Icons",
+		"pl_public_images":			"./public/Assets/Images",
+		"pl_public_images_edit":	"./public/Assets/ImagesEditorial",
+		"pl_public_js":				"./public/Assets/Javascript",
+		"pl_public_js_enhance":		"./public/Assets/JavascriptEnhancement",
+		"pl_public_fonts":			"./public/Assets/Fonts"
+	}
+}
