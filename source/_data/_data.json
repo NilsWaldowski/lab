@@ -1,0 +1,48 @@
+{
+	"title": "CPS-IT Pattern Lab",
+	"bodyClass": "bodyClass",
+	"img": {
+		"logo": {
+			"src": "/Templates/Master/Resources/Public/Images/logo.png",
+			"alt": "Logo"
+		},
+		"favicon-16x16": {
+			"src": "/Templates/Master/Resources/Public/Images/favicon.ico"
+		},
+		"loader": {
+			"src": "/Templates/Master/Resources/Public/Images/loader.gif",
+			"alt": "Loading Spinner"
+		},
+		"landscape-4x3": {
+			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_4x3.png",
+			"alt": "4x3 Image"
+		},
+		"landscape-16x9": {
+			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_16x9.png",
+			"alt": "16x9 Image"
+		},
+		"square": {
+			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_1x1.png",
+			"alt": "Square Image"
+		},
+		"content": {
+			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_16x9.png",
+			"alt": "TYPO3 Content Image"
+		},
+		"avatar": {
+			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_avatar.png",
+			"alt": "Manfred Mustermann"
+		}
+	},
+	"headline": {
+		"short": "Lorem ipsum dolor sit (37 characters)",
+		"medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+	},
+	"bodytext": {
+		"short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+		"medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	},
+	"description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+	"url": "#"
+}
