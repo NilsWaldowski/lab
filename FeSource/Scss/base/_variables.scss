@@ -17,7 +17,7 @@ $use-susy-grids: 	false;
  * --------------------------------------------------------------------------
  * You can add more breakpoints in /css/scss/base/_mixins.scss --> @mixin bp
  */
-$mobile-first: 		false; //if mobile first is true the breakpoints values are min-values
+$mobile-first: 		true; //if mobile first is true the breakpoints values are min-values
 
 $bp-small: 			570px;
 $bp-medium-small: 	768px;
@@ -35,8 +35,8 @@ $bp-large: 			1280px;
  */
 $base-font-size-for-calc:	18;		// value without unit for calculation purpose (global element spacing)
 $base-font-size: 			18px;	// big screen
-$base-font-size-large: 		16px;	// "normal" desktop
-$base-font-size-medium: 	16px;	// tablet
+$base-font-size-large: 		18px;	// "normal" desktop
+$base-font-size-medium: 	18px;	// tablet
 $base-font-size-small: 		16px;	// smartphone
 $base-line-height: 			1.375;
 $base-line-height-large: 	1.25;
@@ -70,6 +70,22 @@ $space-module-half: 		$space-module / 2; // for csc-frame-rulerAfter & csc-frame
 $c-black: 		#000000;
 $c-white: 		#FFFFFF;
 
+/*
+$c-1:			#69D2E7;
+$c-2:			#A7DBD8;
+$c-3:			#E0E4CC;
+$c-4:			#F38630;
+$c-5:			#FA6900;
+*/
+
+$c2-0:				#4d4d4d;
+$c2-1:				#0B486B;
+$c2-2:				#3B8686;
+$c2-3:				#79BD9A;
+$c2-4:				#A8DBA8;
+$c2-5:				#CFF09E;
+
+
 $c-error: 		red;
 $c-valid: 		green;
 $c-disabled:	grey;
@@ -84,7 +100,7 @@ $c-disabled:	grey;
  */
 
 // base typography
-$c-font-main: 			$c-black;
+$c-font-main: 			$c2-0;
 $c-font-link: 			$c-black;
 
 // border & forms (line before & after, inputs, hr, tables)
@@ -112,10 +128,8 @@ $c-font-ph: 			#CCCCCC;
  * Base Font Families
  * --------------------------------------------------------------------------
  */
-$base-font-family: 		Arial, Georgia, serif;
-$base-font-family-2: 	Verdana, Arial, Georgia, serif;
-
-
+$base-font-family: 		'open sans', Verdana, sans-serif;
+$base-font-family-2: 	'Droid Serif', Arial, Georgia, serif;
 
 
 /**
@@ -180,14 +194,14 @@ $h4-ma-bo: 				0.55em;
  * h4 & h5 are usually the same size as base-font-size but with different styling (therefore we didn't create breakpoint behaviour in advance)
  */
 $h5-font-family: 		$base-font-family;
-$h5-weight: 			700;
-$h5-size: 				16px;
+$h5-weight: 			400;
+$h5-size: 				15px;
 $h5-line: 				$base-line-height;
 $h5-color: 				$c-font-main;
 $h5-ma-bo: 				0.4em;
 
 $h6-font-family: 		$base-font-family;
-$h6-weight: 			700;
+$h6-weight: 			400;
 $h6-size: 				16px;
 $h6-line: 				$base-line-height;
 $h6-color: 				$c-font-main;

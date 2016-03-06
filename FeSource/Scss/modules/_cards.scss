@@ -1,0 +1,214 @@
+/**
+ * Cards
+ */
+
+.b-card {
+	position: relative;
+	//border: 1px solid rgba($c2-0, 0.6);
+	box-shadow: 0 0 15px rgba(#000, 0.1);
+	border: 1px solid rgba(#000, 0.2);
+	width: 100%;
+
+	@include enhanced {
+		display: inline-flex;
+	}
+
+	// typography
+	.b-card__category { // h3 in markup
+		font-size: 15px;
+		color: rgba($c2-0, 0.6);
+		font-weight: normal;
+		//font-family: $base-font-family-2;
+		margin-bottom: 0;
+	}
+
+	.b-card__title { // h2 in markup
+		line-height: 1;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.b-card__category,
+	.b-card__title,
+	p {
+		//text-align: center;
+	}
+
+	hr {
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #eaeaea;
+	}
+}
+
+
+
+
+/**
+* Globals (for all cards)
+*/
+.b-card__inner {
+	position: relative;
+	//background-color: $c-3;
+	//background-color: rgba($c2-0, 0.01);
+	background-color: lighten($c2-0, 65%);
+	background-color: lighten($c2-1, 75%);
+	width: 100%;
+}
+
+.b-card__image__overlay {
+	background-color: rgba($c2-1, 0.4);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+.b-card__content {
+	padding: 15px;
+
+	@include enhanced {
+		padding: 15px 15px 50px 15px;
+	}
+}
+
+.b-card__more-link {
+	margin-top: 15px;
+	display: inline-block;
+
+	@include enhanced {
+
+		// override core styling
+		margin-top: 0;
+		display: block;
+
+		// enhanced styling
+		position: absolute;
+		text-indent: -99999px;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+
+
+.b-card__meta {
+	display: none;
+
+	@include enhanced {
+
+		// override core styling
+		display: inline-block;
+
+		// enhanced styling
+		border-top: 1px solid rgba($c2-0, 0.6);
+		width: calc(100% - 30px);
+		margin-left: 15px;
+		margin-bottom: 10px;
+		position: relative;
+
+		@include bp(medium-small) {
+			position: absolute;
+			bottom: 0;
+		}
+
+		span {
+			float: right;
+			font-size: 14px;
+
+			&:nth-child(1) {
+				float: left;
+			}
+		}
+	}
+}
+
+
+
+
+/**
+* Card Types (Work, Blog, Lab)
+*/
+.b-card--work {
+
+	.b-card__image {
+		display: none;
+
+		@include enhanced {
+			display: block;
+			position: relative;
+
+			width: 100%;
+			padding-bottom: 43%; // todo: set a global image ratio
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				display: block;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.b-card__content {
+		padding: 15px;
+	}
+}
+
+.b-card--blog {
+	// no styles needed yet
+}
+
+.b-card--lab {
+
+	.b-card__inner {
+		width: 100%;
+		background-image: url('/Assets/ImagesEditorial/lab_test.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+	}
+
+	.b-card__image__overlay {
+		background-color: rgba($c2-1, 0.7);
+		z-index: 0;
+	}
+
+	.b-card__content {
+		position: relative;
+		z-index: 1;
+
+		@include enhanced {
+
+			@include bp(medium-small) {
+				// override core styling
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.b-card__title,
+	.b-card__meta,
+	.b-card__more-link {
+		color: #fff;
+	}
+
+	.b-card__category {
+		color: rgba(#fff, 0.5);
+	}
+
+	.b-card__meta {
+		border-top: 1px solid #fff;
+	}
+}

@@ -1,4 +1,4 @@
-ul.rte_ul, ol.rte_ol {
+ul, ol {
 	margin-left: 25px;
 	list-style: disc;
 
@@ -12,23 +12,10 @@ ul.rte_ul, ol.rte_ol {
 	}
 }
 
-ol.rte_ol {
+ol {
 	list-style: decimal;
 
 	ol {
 		list-style: decimal;
 	}
-}
-
-// helper class in order to display the list styles immediately in RTE
-.htmlarea-content-body {
-
-	ul {
-		@extend .rte_ul;
-	}
-
-	ol {
-		@extend .rte_ol;
-	}
-
 }

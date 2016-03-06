@@ -15,22 +15,29 @@ body {
 	font-family: $base-font-family;
 	color: $c-font-main;
 
-	font-size: $base-font-size;
-	line-height: $base-line-height;
+	font-size: $base-font-size-small;
+	line-height: $base-line-height-small;
 
-	@include bp(large) {
-		font-size: $base-font-size-large;
-		line-height: $base-line-height-large;
+	//background-color: $c2-2;
+
+	@include enhanced {
+		// overflow hidden in order to use sliding content in/out and get no horizontal scroll bar
+		overflow-x: hidden;
 	}
 
-	@include bp(medium) {
+	@include bp(medium-small) {
 		font-size: $base-font-size-medium;
 		line-height: $base-line-height-medium;
 	}
 
-	@include bp(medium-small) {
-		font-size: $base-font-size-small;
-		line-height: $base-line-height-small;
+	@include bp(medium) {
+		font-size: $base-font-size-large;
+		line-height: $base-line-height-large;
+	}
+
+	@include bp(large) {
+		font-size: $base-font-size;
+		line-height: $base-line-height;
 	}
 }
 
@@ -50,11 +57,11 @@ object {
 
 
 .g-container {
-	max-width: 960px;
+	width: 90%;
 	margin: 0 auto;
 
-	@include bp(1023px) {
-		width: 90%;
+	@include bp(1025px) {
+		max-width: 1200px;
 	}
 }
 

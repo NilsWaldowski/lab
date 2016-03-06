@@ -19,8 +19,14 @@
  * Elements (RTE and global styling)
  * ------------------------------------------------
  */
-// RTE Elements are imported within /css/scss/rte.scss (which is imported in the screen.css also)
-
+@import "elements/g_elements_spacing";
+@import "elements/g_elements_forms";
+@import "elements/rte_buttons";
+@import "elements/rte_headings";
+@import "elements/rte_links";
+@import "elements/rte_lists";
+@import "elements/rte_rules";
+@import "elements/rte_abbr";
 
 /**
  * Modules
@@ -29,6 +35,9 @@
  * ------------------------------------------------
  */
 @import "modules/menu_main";
+@import "modules/dashboard";
+@import "modules/cards";
+@import "modules/loading";
 
 
 /**

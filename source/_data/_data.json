@@ -1,36 +1,36 @@
 {
-	"title": "CPS-IT Pattern Lab",
+	"title": "NilsWaldowski.de",
 	"bodyClass": "bodyClass",
 	"img": {
 		"logo": {
-			"src": "/Templates/Master/Resources/Public/Images/logo.png",
+			"src": "/Assets/Images/logo.png",
 			"alt": "Logo"
 		},
 		"favicon-16x16": {
-			"src": "/Templates/Master/Resources/Public/Images/favicon.ico"
+			"src": "/Assets/Images/favicon.ico"
 		},
 		"loader": {
-			"src": "/Templates/Master/Resources/Public/Images/loader.gif",
+			"src": "/Assets/Images/loader.gif",
 			"alt": "Loading Spinner"
 		},
 		"landscape-4x3": {
-			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_4x3.png",
+			"src": "/Assets/Images/TestImages/img_4x3.png",
 			"alt": "4x3 Image"
 		},
 		"landscape-16x9": {
-			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_16x9.png",
+			"src": "/Assets/Images/TestImages/img_16x9.png",
 			"alt": "16x9 Image"
 		},
 		"square": {
-			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_1x1.png",
+			"src": "/Assets/Images/TestImages/img_1x1.png",
 			"alt": "Square Image"
 		},
 		"content": {
-			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_16x9.png",
+			"src": "/Assets/Images/TestImages/img_16x9.png",
 			"alt": "TYPO3 Content Image"
 		},
 		"avatar": {
-			"src": "/Templates/Master/Resources/Public/Images/TestImages/img_avatar.png",
+			"src": "/Assets/Images/TestImages/img_avatar.png",
 			"alt": "Manfred Mustermann"
 		}
 	},

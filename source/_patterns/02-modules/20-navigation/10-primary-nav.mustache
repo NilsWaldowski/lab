@@ -2,16 +2,19 @@
 <nav class="b-menu">
 	<ul class="b-menu__list">
 		<li class="b-menu__list__item b-menu__list__item--first">
-			<a href="{{ url }}">Home</a>
+			<a href="{{ link.templates-blog-list }}" class="g-ajax">Blog</a>
 		</li>
 		<li class="b-menu__list__item">
-			<a href="{{ url }}">About</a>
+			<a href="{{ link.templates-work-list }}" class="g-ajax">Work</a>
 		</li>
 		<li class="b-menu__list__item">
-			<a href="{{ url }}">Blog</a>
+			<a href="{{ link.templates-lab-list }}" class="g-ajax">Lab</a>
+		</li>
+		<li class="b-menu__list__item">
+			<a href="{{ link.templates-process }}" class="g-ajax">Process</a>
 		</li>
 		<li class="b-menu__list__item b-menu__list__item--last">
-			<a href="{{ url }}">Contact</a>
+			<a href="{{ link.templates-about }}" class="g-ajax">About</a>
 		</li>
 	</ul>
 </nav>

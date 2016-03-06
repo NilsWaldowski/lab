@@ -10,7 +10,6 @@
 	},
 	"dest": {
 		"base_dir":			"../nilswaldowski.github.io",
-		"dest":				"../nilswaldowski.github.io/Assets",
 		"dest_css":			"../nilswaldowski.github.io/Assets/Css",
 		"dest_icons":		"../nilswaldowski.github.io/Assets/Icons",
 		"dest_img":			"../nilswaldowski.github.io/Assets/Images",
@@ -20,7 +19,6 @@
 		"dest_fonts":		"../nilswaldowski.github.io/Assets/Fonts"
 	},
 	"pl_dest": {
-		"pl_public":				"./public/Assets",
 		"pl_public_css":			"./public/Assets/Css",
 		"pl_public_icons":			"./public/Assets/Icons",
 		"pl_public_images":			"./public/Assets/Images",
@@ -28,5 +26,13 @@
 		"pl_public_js":				"./public/Assets/Javascript",
 		"pl_public_js_enhance":		"./public/Assets/JavascriptEnhancement",
 		"pl_public_fonts":			"./public/Assets/Fonts"
+	},
+	"patternlab": {
+		"public": "./public",
+		"files": [
+			"./source/_patterns/**/*.mustache",
+			"./source/_patterns/**/*.json",
+			"./source/_data/*.json"
+		]
 	}
 }

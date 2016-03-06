@@ -1,0 +1,182 @@
+/**
+ * Dashboard
+ */
+$dashboardTransformSlideIn:		transform 0.4s;
+$dashboardTransformHover:		opacity 0.2s 0s;
+
+
+.b-dashboard {
+	//padding: 40px 0;
+	//margin-left: -10px;
+	//margin-right: -10px;
+	margin: 40px -10px;
+
+	@include enhanced {
+		display: flex;
+		flex-wrap: wrap;
+
+		/*
+		&:hover {
+			.b-dashboard__item {
+				opacity: 0.3;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		*/
+
+		.b-dashboard__item {
+
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+
+	}
+}
+
+.b-dashboard__item {
+	margin-bottom: 20px;
+	width: 100%;
+
+	@include enhanced {
+		display: flex;
+		transform: translateX(-2000px);
+		transition: transform 0.4s, opacity 0.2s 0s;
+
+		@include bp(medium-small) {
+			// override core styling
+			margin-bottom: 0;
+			width: 50%;
+
+			// enhanced styling
+			padding: 10px 10px 10px 10px;
+		}
+
+		@include bp(medium) {
+			width: 33.33%;
+		}
+	}
+
+	// todo: js-loaded good solution? maybe rename class or trigger after another event?
+	@include when-inside('.js-loaded') {
+		transform: translateX(0);
+	}
+
+	@include when-inside('.js-page-change') {
+		transform: translateX(2000px);
+	}
+
+
+	/**
+	* Transition delays
+	* 9 Items possible
+	*/
+
+	@for $i from 1 through 9 {
+		&:nth-child(#{$i}) {
+			//@include transition-delay(0.1s * $i);
+			transition: $dashboardTransformSlideIn (0.05s * $i), $dashboardTransformHover;
+		}
+	}
+
+	/*
+	&:nth-child(1) {
+		transition: $dashboardTransformSlideIn 0.0s, $dashboardTransformHover;
+	}
+	&:nth-child(2) {
+		transition: $dashboardTransformSlideIn 0.05s, $dashboardTransformHover;
+	}
+	&:nth-child(3) {
+		transition: $dashboardTransformSlideIn 0.10s, $dashboardTransformHover;
+	}
+	&:nth-child(4) {
+		transition: $dashboardTransformSlideIn 0.15s, $dashboardTransformHover;
+	}
+	&:nth-child(5) {
+		transition: $dashboardTransformSlideIn 0.20s, $dashboardTransformHover;
+	}
+	&:nth-child(6) {
+		transition: $dashboardTransformSlideIn 0.25s, $dashboardTransformHover;
+	}
+	&:nth-child(7) {
+		transition: $dashboardTransformSlideIn 0.30s, $dashboardTransformHover;
+	}
+	&:nth-child(8) {
+		transition: $dashboardTransformSlideIn 0.35s, $dashboardTransformHover;
+	}
+	&:nth-child(9) {
+		transition: $dashboardTransformSlideIn 0.40s, $dashboardTransformHover;
+	}
+	*/
+
+	@include bp(medium-small) {
+
+		&:nth-child(2) {
+			transition: $dashboardTransformSlideIn 0.00s, $dashboardTransformHover;
+		}
+		&:nth-child(4) {
+			transition: $dashboardTransformSlideIn 0.05s, $dashboardTransformHover;
+		}
+		&:nth-child(6) {
+			transition: $dashboardTransformSlideIn 0.10s, $dashboardTransformHover;
+		}
+		&:nth-child(8) {
+			transition: $dashboardTransformSlideIn 0.15s, $dashboardTransformHover;
+		}
+		&:nth-child(9) {
+			display: none;
+		}
+
+
+		&:nth-child(1) {
+			transition: $dashboardTransformSlideIn 0.20s, $dashboardTransformHover;
+		}
+		&:nth-child(3) {
+			transition: $dashboardTransformSlideIn 0.25s, $dashboardTransformHover;
+		}
+		&:nth-child(5) {
+			transition: $dashboardTransformSlideIn 0.30s, $dashboardTransformHover;
+		}
+		&:nth-child(7) {
+			transition: $dashboardTransformSlideIn 0.35s, $dashboardTransformHover;
+		}
+	}
+
+
+	@include bp(medium) {
+		&:nth-child(3) {
+			transition: $dashboardTransformSlideIn 0.0s, $dashboardTransformHover;
+		}
+		&:nth-child(6) {
+			transition: $dashboardTransformSlideIn 0.05s, $dashboardTransformHover;
+		}
+		&:nth-child(9) {
+			display: flex; // override last BP
+			transition: $dashboardTransformSlideIn 0.10s, $dashboardTransformHover;
+		}
+
+		&:nth-child(2) {
+			transition: $dashboardTransformSlideIn 0.15s, $dashboardTransformHover;
+		}
+		&:nth-child(5) {
+			transition: $dashboardTransformSlideIn 0.20s, $dashboardTransformHover;
+		}
+		&:nth-child(8) {
+			transition: $dashboardTransformSlideIn 0.25s, $dashboardTransformHover;
+		}
+
+		&:nth-child(1) {
+			transition: $dashboardTransformSlideIn 0.30s, $dashboardTransformHover;
+		}
+		&:nth-child(4) {
+			transition: $dashboardTransformSlideIn 0.35s, $dashboardTransformHover;
+		}
+		&:nth-child(7) {
+			transition: $dashboardTransformSlideIn 0.40s, $dashboardTransformHover;
+		}
+	}
+
+}
